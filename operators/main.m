@@ -18,6 +18,7 @@ int main(int argc, const char * argv[])
         
         int a = 5;
         int b = 2;
+        int res;
         
         printf("%i %c %i = %i\n", a,'%', b, a % b);
         printf("%i + %i = %i\n", a, b, a+b);
@@ -26,11 +27,16 @@ int main(int argc, const char * argv[])
         printf("%i / %i = %i\n", a, b, a/b);
         
         printf("\n");
-        printf("%i += %i (%i)\n", a, b, a+=b);
-        printf("%i -= %i (%i)\n", a, b, a-=b);
-        printf("%i *= %i (%i)\n", a, b, a*=b);
-        printf("%i /= %i (%i)\n", a, b, a/=b);
-        printf("%i %c= %i (%i)\n", a, '%', b, a%=b);
+        res = a+b;
+        printf("%i += %i (%i)\n", a, b, res);
+        res = a - b;
+        printf("%i -= %i (%i)\n", a, b, res);
+        res = a * b;
+        printf("%i *= %i (%i)\n", a, b, res);
+        res = a /b;
+        printf("%i /= %i (%i)\n", a, b, res);
+        res = a % b;
+        printf("%i %c= %i (%i)\n", a, '%', b, res);
         
         float x = 5;
         float y = 3;
